@@ -1,3 +1,4 @@
+{{-- @dd($movies) --}}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,8 +12,8 @@
 
 <body>
     @include('shared.header')
-    <h1>Laravel Template</h1>
-    <img src="{{ Vite::asset('resources/img/logo.jpg') }}" alt="pic">
+    {{-- <h1>Laravel Template</h1>
+    <img src="{{ Vite::asset('resources/img/logo.jpg') }}" alt="pic"> --}}
     @include('shared.cards')
     @include('shared.footer')
 </body>

@@ -1,2 +1,8 @@
 /*resources/scss/app.scss*/
 @import "~bootstrap/scss/bootstrap";
+
+header,
+footer {
+    background-color: darkblue;
+    color: aliceblue;
+}
