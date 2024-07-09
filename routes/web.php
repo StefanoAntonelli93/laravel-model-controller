@@ -19,3 +19,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', [MovieController::class, 'index'])->name('welcome');
+
+
+// prova di rotta parametrica
+Route::get('/movie/{id}', [MovieController::class, 'show'])->name('movie');

@@ -6,12 +6,10 @@
             @foreach ($movies as $movie)
                 <ul class="list-unstyled">
                     <li>
-                        <div>Titolo: {{ $movie->title }}</div>
-                        <div>Titolo originale: {{ $movie->original_title }}</div>
-                        <div>Nazione: {{ $movie->nationality }}</div>
-                        {{-- per creare un data leggibile uso libreria carbon --}}
-                        {{ \Carbon\Carbon::parse($movie->date)->format('d/m/Y') }}
-                        <div>Voto: {{ $movie->vote }}</div>
+                        <h3>{{ $movie->title }}</h3>
+                        <a href="{{ route('movie', ['id' => $movie->id]) }}">
+                            <div>Scheda completa</div>
+                        </a>
                     </li>
                     <hr>
                 </ul>

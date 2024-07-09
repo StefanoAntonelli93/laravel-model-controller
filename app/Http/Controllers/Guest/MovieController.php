@@ -18,4 +18,16 @@ class MovieController extends Controller
         // dd($movies);
         return view('welcome', $data);
     }
+
+    // funzione parametrica  
+    public function show($id)
+    {
+        // cerco per id i film 
+        $movie = Movie::find($id);
+        if ($movie === NULL) {
+            return 'film non trovato';
+        }
+        // dd($movie);
+        return view('movie', compact('movie'));
+    }
 }
