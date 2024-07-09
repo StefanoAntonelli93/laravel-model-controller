@@ -6,10 +6,11 @@
             @foreach ($movies as $movie)
                 <ul class="list-unstyled">
                     <li>
-                        <div>Titolo:{{ $movie->title }}</div>
+                        <div>Titolo: {{ $movie->title }}</div>
                         <div>Titolo originale: {{ $movie->original_title }}</div>
                         <div>Nazione: {{ $movie->nationality }}</div>
-                        <div>Data d'uscita: {{ $movie->date }}</div>
+                        {{-- per creare un data leggibile uso libreria carbon --}}
+                        {{ \Carbon\Carbon::parse($movie->date)->format('d/m/Y') }}
                         <div>Voto: {{ $movie->vote }}</div>
                     </li>
                     <hr>
